@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{ title }} - {{ order_to_display.customer_name }}'s order</title>
+</head>
+<body>
+    <h1 class=title>{{ order_to_display.customer_name }}'s Order</h1>
+    <hgroup>
+        <h4 class=info>Date</h4>
+        <h4 class=info>Quantity Ordered</h4>
+        <h4 class=info>Items</h4>
+    </hgroup>
+    <p>{{order_to_display.order_date}} - {{order_to_display.quantity}} - {{ order_to_display.items }}</p>
+</body>
+</html>

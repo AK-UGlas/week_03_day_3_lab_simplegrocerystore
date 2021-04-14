@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{{ title }} - Online Grocery Orders</title>
 </head>
 <body>
-    <h1>Customer Orders</h1>
-    {% for order in orders %}
+    <h1 class=title>Customer Orders</h1>
+    {% for order in range(0, order_len) %}
     <div>
-        <p>{{ order.customer_name }}: <b>{{ order.order_date}}</b> {{order.quantity}} {{order.items}}</p>
+        <p><a href="/orders/{{ order }}">{{ orders[order].customer_name }}</a>: <b>{{ orders[order].order_date}}</b> {{orders[order].quantity}} {{orders[order].items}}</p>
     </div>
     {% endfor %}
 </body>
