@@ -9,11 +9,11 @@
 </head>
 <body>
     <h1 class=title>{{ order_to_display.customer_name }}'s Order</h1>
-    <hgroup>
-        <h4 class=info>Date</h4>
-        <h4 class=info>Quantity Ordered</h4>
-        <h4 class=info>Items</h4>
-    </hgroup>
+    <div class=info>
+        <h4 >Date</h4>
+        <h4 >Quantity Ordered</h4>
+        <h4 >Items</h4>
+    </div>
     <p>{{order_to_display.order_date}} - {{order_to_display.quantity}} - {{ order_to_display.items }}</p>
 </body>
 </html>
