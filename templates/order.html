@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{{ title }} - {{ order_to_display.customer_name }}'s order</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-    <h1 class=title>{{ order_to_display.customer_name }}'s Order</h1>
-    <div class=info>
-        <h4 >Date</h4>
-        <h4 >Quantity Ordered</h4>
-        <h4 >Items</h4>
+    <h1 class=title>{{ order.customer_name }}'s Order</h1>
+    <div class=all_attribs>
+        <h4 class=attrib>Date</h4>
+        <h4 class=attrib>Quantity Ordered</h4>
+        <h4 class=attrib>Items</h4>
     </div>
-    <p>{{order_to_display.order_date}} - {{order_to_display.quantity}} - {{ order_to_display.items }}</p>
+    <p>{{order.order_date}} - {{order.quantity}} - {{ order.items }}</p>
 </body>
 </html>

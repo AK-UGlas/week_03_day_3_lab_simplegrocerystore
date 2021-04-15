@@ -1,8 +1,13 @@
-.title {
-    color: dodgerblue;
+body {
+    background-color: rgb(121, 78, 78);
 }
 
-.info {
+.title {
+    color: green;
+}
+
+.all_attribs {
     display: flex;
-    flex-wrap: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

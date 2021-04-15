@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1 class=title>Customer Orders</h1>
-    {% for order in range(0, order_len) %}
+    {% for order in orders %}
     <div>
-        <p><a href="/orders/{{ order }}">{{ orders[order].customer_name }}</a>: <b>{{ orders[order].order_date}}</b> {{orders[order].quantity}} {{orders[order].items}}</p>
+        <p><a href="/orders/{{ orders.index(order) }}">{{ order.customer_name }}</a>: <b>{{ order.order_date}}</b> {{order.quantity}} {{order.items}}</p>
     </div>
     {% endfor %}
 </body>
